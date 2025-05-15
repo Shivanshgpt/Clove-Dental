@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Implant Transformations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .transformations-container {
+            width: 100%;
+        }
+        
+        .transformations {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 10px;
+        }
+
+        .transformation-card {
+            width: calc(25% - 15px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: white;
+            transition: transform 0.2s ease;
+        }
+        
+        @media (max-width: 900px) {
+            .transformations-container {
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            
+            .transformations-container::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .transformations {
+                width: max-content;
+                justify-content: flex-start;
+            }
+            
+            .transformation-card {
+                flex-shrink: 0;
+            }
+        }
+
+        .transformation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .before-after {
+            position: relative;
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        .before-after img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .patient-info {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .patient-name {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .patient-location {
+            color: #f77f00;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Colors for each city */
+        .mumbai { color: #f77f00; }
+        .bangalore { color: #f77f00; }
+        .delhi { color: #f77f00; }
+        .chennai { color: #f77f00; }
+        
+        @media (max-width: 1200px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .transformation-card {
+                width: 260px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+            
+            .transformation-card {
+                width: 240px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+            
+            .subtitle {
+                font-size: 15px;
+            }
+            
+            .transformation-card {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Real Smiles, Real Transformations</h1>
+            <p class="subtitle">See the life-changing results our dental implant patients enjoy</p>
+        </header>
+        
+        <div class="transformations-container">
+            <div class="transformations">
+                <!-- Arjun mehta -->
+
+                <div class="transformation-card">
+                    <div class="before-after">
+                        <img src="assests/Arjun mehta.png" alt="Arjun Mehta Before and After Dental Implant">
+                    </div>
+                    <div class="patient-info">
+                        <span class="patient-name">Arjun Mehta</span>
+                        <span class="patient-location mumbai">Mumbai</span>
+                    </div>
+                </div>
+                <!-- Kavita sharma -->
+                <div class="transformation-card">
+                    <div class="before-after">
+                        <img src="assests/Kavita sharma.png" alt="Kavita Sharma Before and After Dental Implant">
+                    </div>
+                    <div class="patient-info">
+                        <span class="patient-name">Kavita Sharma</span>
+                        <span class="patient-location bangalore">Bangalore</span>
+                    </div>
+                </div>
+                <!-- Neha joshi -->
+                
+                <div class="transformation-card">
+                    <div class="before-after">
+                        <img src="assests/neha joshi.png" alt="Neha Joshi Before and After Dental Implant">
+                    </div>
+                    <div class="patient-info">
+                        <span class="patient-name">Neha Joshi</span>
+                        <span class="patient-location delhi">Delhi</span>
+                    </div>
+                </div>
+                <!-- viram desai -->
+                
+                <div class="transformation-card">
+                    <div class="before-after">
+                        <img src="assests/viram desai.png" alt="Viram Desai Before and After Dental Implant">
+                    </div>
+                    <div class="patient-info">
+                        <span class="patient-name">Viram Desai</span>
+                        <span class="patient-location chennai">Chennai</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.transformation-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                
+                card.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
